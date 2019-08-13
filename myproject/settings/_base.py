@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import json
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.version import get_git_changeset
+from myproject.apps.core.versioning import get_git_changeset_timestamp
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -144,7 +144,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = f'/static/{get_git_changeset()}/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'site_static'),
+]
+
+changeset_timestamp = get_git_changeset_timestamp(BASE_DIR)
+STATIC_URL = f'/static/{changeset_timestamp}/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
 
 MEDIA_URL = '/media/'
