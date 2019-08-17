@@ -10,8 +10,8 @@ Some examples:
 
 Then use this README file to describe what apps and versions you are using here.
 
-| App | Version | Description | Source URL |
-|-----|---------|-------------|------------|
-|     |         |             |            |
-|     |         |             |            |
-|     |         |             |            |
+| Django App | Version | Description | Source URL |
+|------------|---------|-------------|------------|
+|            |         |             |            |
+|            |         |             |            |
+|            |         |             |            |
