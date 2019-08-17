@@ -148,8 +148,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'site_static'),
 ]
 
-changeset_timestamp = get_git_changeset_timestamp(BASE_DIR)
-STATIC_URL = f'/static/{changeset_timestamp}/'
+timestamp = get_git_changeset_timestamp(BASE_DIR)
+STATIC_URL = f'/static/{timestamp}/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
 
 MEDIA_URL = '/media/'
