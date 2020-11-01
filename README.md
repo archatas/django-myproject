@@ -1,3 +1,7 @@
 # Django MyProject
 
-This is a boilerplate for a scalable Django project. To use it, just download the source code and globally replace "myproject" with a meaningful project name. Then start building your apps.
+This is a boilerplate for a scalable Django project. To use it, just download the source code.
+
+1 - globally replace "myproject" with a meaningful project name. 
+2 - create secrets.json in settings directory
+
